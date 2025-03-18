@@ -9,7 +9,7 @@ Game logic must be handled by game libraries and rendering by graphic libraries.
 All game libraries must implement the following symbols:
 
     
-```c
+```cpp
 // Symbols that your game library must define
 
 extern "C" {
@@ -32,13 +32,13 @@ They must also provide a function that returns the system events.
 
 All graphics libraries must implement the following symbols:
 
-```c
+```cpp
 // Symbols that your game library must define
 
 extern "C" {
-    void drawSquare(ArcadeColor color, float x, float y);
-    void drawCircle(ArcadeColor color, float x, float y);
-    void drawSprite(float x, float y);
+    void drawSquare(ArcadeColor color, float x, float y, float size);
+    void drawCircle(ArcadeColor color, float x, float y, float size);
+    void drawSprite(ArcadeSprite sprite, float x, float y, float size);
     void drawText(char *text, float x, float y);
     void getEvents(ArcadeEvent *events);
 }
