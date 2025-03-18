@@ -2,43 +2,27 @@
 ** EPITECH PROJECT, 2025
 ** Arcade
 ** File description:
-** ArcadeAPI.hpp
+** Event.hpp
 */
 
-#ifndef ARCADEAPI_HPP
-    #define ARCADEAPI_HPP
+#ifndef ARCADE_EVENT_HPP
+    #define ARCADE_EVENT_HPP
+
+    #include "Keyboard.hpp"
+    #include "Mouse.hpp"
 
 namespace Arcade {
-    struct Color {
-        char r;
-        char g;
-        char b;
-        char a;
-    };
-    
-    typedef struct Object {
-        enum Type {
-            TEXT,
-            OBJ
-        };
+    struct Event;
+}
 
-        Type type;
-        int id;
-        char *text;
-        char *texture;
-        char ascii;
-        Color color;
-        float x;
-        float y;
-        float length;
-        float height;
-    };
+typedef Arcade::Event ArcadeEvent;
 
+namespace Arcade {
     ////////////////////////////////////////////////////////////
     /// \brief Defines a system event and its parameters
     ///
     ////////////////////////////////////////////////////////////
-    class Event {
+    struct Event {
         public:
         
             ////////////////////////////////////////////////////////////
@@ -152,7 +136,6 @@ namespace Arcade {
                 MouseWheelScrollEvent mouseWheelScroll;  //!< Mouse wheel event parameters (Event::MouseWheelScrolled)
             };
     };
-
 } // namespace Arcade
 
-#endif /* ARCADEAPI_HPP */
+#endif /* ARCADE_EVENT_HPP */

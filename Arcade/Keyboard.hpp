@@ -6,11 +6,10 @@
 */
 
 
-#ifndef KEYBOARD_HPP
-    #define KEYBOARD_HPP
+#ifndef ARCADE_KEYBOARD_HPP
+    #define ARCADE_KEYBOARD_HPP
 
 namespace Arcade {
-
     class Keyboard {
         public:
             enum Key {
@@ -129,7 +128,6 @@ namespace Arcade {
                 Quote     = Apostrophe 
             };
     };
-
 } // namespace Arcade
 
-#endif /* KEYBOARD_HPP */
+#endif /* ARCADE_KEYBOARD_HPP */

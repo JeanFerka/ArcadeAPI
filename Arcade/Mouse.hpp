@@ -5,11 +5,10 @@
 ** Mouse.hpp
 */
 
-#ifndef MOUSE_HPP
-    #define MOUSE_HPP
+#ifndef ARCADE_MOUSE_HPP
+    #define ARCADE_MOUSE_HPP
 
 namespace Arcade {
-
     class Mouse {
         public:
             enum Button {
@@ -26,8 +25,7 @@ namespace Arcade {
                 VerticalWheel,   // Vertical scrolling wheel
                 HorizontalWheel  // Horizontal scrolling wheel
             };
-        };
-
+    };
 } // namespace Arcade
 
-#endif /* MOUSE_HPP */
+#endif /* ARCADE_MOUSE_HPP */
