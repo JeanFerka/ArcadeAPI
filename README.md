@@ -44,4 +44,4 @@ extern "C" {
 }
 ```
 
-The related types and structures are available in the header file ArcadeAPI.hpp.
+The related types and structures are available in the header files contained in the Arcade folder.
