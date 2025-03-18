@@ -20,7 +20,7 @@ namespace Arcade {
         enum Type {
             TEXT,
             OBJ
-        }
+        };
 
         Type type;
         int id;
