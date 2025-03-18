@@ -1,9 +1,11 @@
 # Arcade’s documentation
 
+
+## How to implement game libraries:
+
 The game logic must be separate from rendering.
 Game logic must be handled by game libraries and rendering by graphic libraries.
 
-## How to implement game libraries:
 All game libraries must implement the following symbols:
 
     
@@ -23,10 +25,11 @@ extern "C" {
 The related types and structures are available in the header file ArcadeAPI.hpp.
 
 
-The graphics libraries must provide practical symbols to display any kind of object.
-They must also provide a function that returns the system events that occured.
-
 ## How to implement graphics libraries:
+
+The graphics libraries must provide practical symbols to display any kind of object.
+They must also provide a function that returns the system events.
+
 All graphics libraries must implement the following symbols:
 
 ```c

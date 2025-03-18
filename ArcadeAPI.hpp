@@ -45,8 +45,7 @@ namespace Arcade {
             /// \brief Size events parameters (Resized)
             ///
             ////////////////////////////////////////////////////////////
-            struct SizeEvent
-            {
+            struct SizeEvent {
                 unsigned int width;  //!< New width, in pixels
                 unsigned int height; //!< New height, in pixels
             };
@@ -55,10 +54,8 @@ namespace Arcade {
             /// \brief Keyboard event parameters (KeyPressed, KeyReleased)
             ///
             ////////////////////////////////////////////////////////////
-            struct KeyEvent
-            {
+            struct KeyEvent {
                 Keyboard::Key code;          //!< Code of the key that has been pressed
-                Keyboard::Scancode scancode; //!< Physical code of the key that has been pressed
                 bool          alt;           //!< Is the Alt key pressed?
                 bool          control;       //!< Is the Control key pressed?
                 bool          shift;         //!< Is the Shift key pressed?
@@ -69,8 +66,7 @@ namespace Arcade {
             /// \brief Text event parameters (TextEntered)
             ///
             ////////////////////////////////////////////////////////////
-            struct TextEvent
-            {
+            struct TextEvent {
                 Uint32 unicode; //!< UTF-32 Unicode value of the character
             };
         
@@ -78,8 +74,7 @@ namespace Arcade {
             /// \brief Mouse move event parameters (MouseMoved)
             ///
             ////////////////////////////////////////////////////////////
-            struct MouseMoveEvent
-            {
+            struct MouseMoveEvent {
                 int x; //!< X position of the mouse pointer, relative to the left of the owner window
                 int y; //!< Y position of the mouse pointer, relative to the top of the owner window
             };
@@ -89,8 +84,7 @@ namespace Arcade {
             ///        (MouseButtonPressed, MouseButtonReleased)
             ///
             ////////////////////////////////////////////////////////////
-            struct MouseButtonEvent
-            {
+            struct MouseButtonEvent {
                 Mouse::Button button; //!< Code of the button that has been pressed
                 int           x;      //!< X position of the mouse pointer, relative to the left of the owner window
                 int           y;      //!< Y position of the mouse pointer, relative to the top of the owner window
@@ -103,8 +97,7 @@ namespace Arcade {
             ///             Use MouseWheelScrollEvent instead.
             ///
             ////////////////////////////////////////////////////////////
-            struct MouseWheelEvent
-            {
+            struct MouseWheelEvent {
                 int delta; //!< Number of ticks the wheel has moved (positive is up, negative is down)
                 int x;     //!< X position of the mouse pointer, relative to the left of the owner window
                 int y;     //!< Y position of the mouse pointer, relative to the top of the owner window
@@ -114,8 +107,7 @@ namespace Arcade {
             /// \brief Mouse wheel events parameters (MouseWheelScrolled)
             ///
             ////////////////////////////////////////////////////////////
-            struct MouseWheelScrollEvent
-            {
+            struct MouseWheelScrollEvent {
                 Mouse::Wheel wheel; //!< Which wheel (for mice with multiple ones)
                 float        delta; //!< Wheel offset (positive is up/left, negative is down/right). High-precision mice may use non-integral offsets.
                 int          x;     //!< X position of the mouse pointer, relative to the left of the owner window
@@ -126,8 +118,7 @@ namespace Arcade {
             /// \brief Enumeration of the different types of events
             ///
             ////////////////////////////////////////////////////////////
-            enum EventType
-            {
+            enum EventType {
                 Closed,                 //!< The window requested to be closed (no data)
                 Resized,                //!< The window was resized (data in event.size)
                 LostFocus,              //!< The window lost the focus (no data)
@@ -151,8 +142,7 @@ namespace Arcade {
             ////////////////////////////////////////////////////////////
             EventType type; //!< Type of the event
         
-            union
-            {
+            union {
                 SizeEvent             size;              //!< Size event parameters (Event::Resized)
                 KeyEvent              key;               //!< Key event parameters (Event::KeyPressed, Event::KeyReleased)
                 TextEvent             text;              //!< Text event parameters (Event::TextEntered)

@@ -9,12 +9,11 @@
 #ifndef KEYBOARD_HPP
     #define KEYBOARD_HPP
 
-namespace Arcade
-{
+namespace Arcade {
+
     class Keyboard {
         public:
-            enum Key
-            {
+            enum Key {
                 Unknown = -1, 
                 A = 0,        
                 B,            

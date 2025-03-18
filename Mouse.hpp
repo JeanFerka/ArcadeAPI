@@ -10,12 +10,9 @@
 
 namespace Arcade {
 
-    class WindowBase;
-
     class Mouse {
         public:
-            enum Button
-            {
+            enum Button {
                 Left,       // Left mouse button
                 Right,      // Right mouse button
                 Middle,     // Middle (wheel) mouse button
@@ -25,8 +22,7 @@ namespace Arcade {
                 ButtonCount // Total number of buttons
             };
 
-            enum Wheel
-            {
+            enum Wheel {
                 VerticalWheel,   // Vertical scrolling wheel
                 HorizontalWheel  // Horizontal scrolling wheel
             };
