@@ -36,9 +36,9 @@ All graphics libraries must implement the following symbols:
 // Symbols that your game library must define
 
 extern "C" {
-    void drawSquare(ArcadeColor color, float x, float y, float size);
-    void drawCircle(ArcadeColor color, float x, float y, float size);
-    void drawSprite(ArcadeSprite sprite, float x, float y, float size);
+    void drawSquare(ArcadeColor *color, float x, float y, float size);
+    void drawCircle(ArcadeColor *color, float x, float y, float size);
+    void drawSprite(ArcadeSprite *sprite, float x, float y, float size);
     void drawText(char *text, float x, float y);
     void getEvents(ArcadeEvent *events);
 }
