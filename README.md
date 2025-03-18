@@ -51,7 +51,7 @@ namespace Arcade {
             virtual void drawLine(Color color, Vector2<float> beg, Vector2<float> end) = 0;
             virtual void drawRectangle(Vector2<float> size, Vector2<float> pos, Color color) = 0;
             virtual void drawCircle(float radius, Color color) = 0;
-            virtual void drawText(const std::string& text, Vector2<float> pos, Color color) = 0;
+            virtual void drawText(const std::string &text, Vector2<float> pos, Color color) = 0;
 
             virtual std::vector<Event> getEvents() = 0;
     }
