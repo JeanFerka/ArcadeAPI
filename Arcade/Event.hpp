@@ -12,12 +12,6 @@
     #include "Mouse.hpp"
 
 namespace Arcade {
-    struct Event;
-}
-
-typedef Arcade::Event ArcadeEvent;
-
-namespace Arcade {
     ////////////////////////////////////////////////////////////
     /// \brief Defines a system event and its parameters
     ///

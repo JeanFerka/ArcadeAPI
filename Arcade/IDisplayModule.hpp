@@ -8,6 +8,9 @@
 #ifndef ARCADE_IDISPLAYMODULE_HPP
     #define ARCADE_IDISPLAYMODULE_HPP
 
+    #include "Color.hpp"
+    #include "Vector.hpp"
+
 namespace Arcade {
     class IDisplayModule;
 }

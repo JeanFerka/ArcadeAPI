@@ -11,12 +11,6 @@
     #include "IDisplayModule.hpp"
 
 namespace Arcade {
-    class IDrawable;
-}
-
-typedef Arcade::IDrawable ArcadeIDrawable
-
-namespace Arcade {
     class IDrawable {
         public:
             virtual ~IDrawable() = default;

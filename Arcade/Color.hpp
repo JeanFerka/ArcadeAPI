@@ -9,12 +9,6 @@
     #define ARCADE_COLOR_HPP
 
 namespace Arcade {
-    struct Color;
-}
-
-typedef Arcade::Color ArcadeColor;
-
-namespace Arcade {
     struct Color {
         char r;
         char g;
