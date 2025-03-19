@@ -16,7 +16,7 @@ namespace Arcade {
             virtual ~IDrawable() = default;
 
             virtual void draw(IDisplayModule &display) const = 0;
-    }
+    };
 }
 
 #endif /* ARCADE_IDRAWABLE_HPP */

@@ -10,6 +10,7 @@
 
     #include "Keyboard.hpp"
     #include "Mouse.hpp"
+    #include <cstdint>
 
 namespace Arcade {
     ////////////////////////////////////////////////////////////
@@ -45,7 +46,7 @@ namespace Arcade {
             ///
             ////////////////////////////////////////////////////////////
             struct TextEvent {
-                Uint32 unicode; //!< UTF-32 Unicode value of the character
+                uint32_t unicode; //!< UTF-32 Unicode value of the character
             };
         
             ////////////////////////////////////////////////////////////

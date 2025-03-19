@@ -9,12 +9,13 @@
     #define ARCADE_IGAMEMODULE_HPP
 
     #include "IDrawable.hpp"
+    #include "Event.hpp"
 
 namespace Arcade {
     class IGameModule;
 }
 
-typedef Arcade::IGameModule ArcadeIGameModule
+typedef Arcade::IGameModule ArcadeIGameModule;
 
 namespace Arcade {
     class IGameModule {
@@ -24,7 +25,7 @@ namespace Arcade {
             virtual void update(std::vector<Event> events) = 0;
 
             virtual std::vector<IDrawable> getDrawables() = 0;
-    }
+    };
 }
 
 #endif /* ARCADE_IGAMEMODULE_HPP */

@@ -10,12 +10,13 @@
 
     #include "Color.hpp"
     #include "Vector.hpp"
+    #include <string>
 
 namespace Arcade {
     class IDisplayModule;
 }
 
-typedef Arcade::IDisplayModule ArcadeIDisplayModule
+typedef Arcade::IDisplayModule ArcadeIDisplayModule;
 
 namespace Arcade {
     class IDisplayModule {
@@ -27,7 +28,7 @@ namespace Arcade {
             virtual void drawRectangle(Vector2<float> size, Vector2<float> pos, Color color) = 0;
             virtual void drawCircle(float radius, Color color) = 0;
             virtual void drawText(const std::string& text, Vector2<float> pos, Color color) = 0;
-    }
+    };
 }
 
 #endif /* ARCADE_IDISPLAYMODULE_HPP */
