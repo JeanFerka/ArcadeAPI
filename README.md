@@ -27,7 +27,7 @@ They must also implement the following symbol, that returns an instance of the c
 // Symbol that your game libraries must define
 
 extern "C" {
-    ArcadeIGameModule *getGame();
+    ArcadeIGameModule *getInstance();
 }
 ```
 
@@ -64,7 +64,7 @@ They must also implement the following symbol, that returns an instance of the c
 // Symbol that your graphics libraries must define
 
 extern "C" {
-    ArcadeIDisplayModule *getDisplay();
+    ArcadeIDisplayModule *getInstance();
 }
 ```
 
