@@ -8,6 +8,8 @@
 #ifndef ARCADE_IGAMEMODULE_HPP
     #define ARCADE_IGAMEMODULE_HPP
 
+    #include <vector>
+    #include <memory>
     #include "IDrawable.hpp"
     #include "Event.hpp"
 
@@ -24,7 +26,7 @@ namespace Arcade {
 
             virtual void update(std::vector<Event> events) = 0;
 
-            virtual std::vector<IDrawable> getDrawables() = 0;
+            virtual std::vector<std::unique_ptr<IDrawable>> getDrawables() = 0;
     };
 }
 

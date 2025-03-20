@@ -8,9 +8,9 @@
 #ifndef ARCADE_EVENT_HPP
     #define ARCADE_EVENT_HPP
 
+    #include <cstdint>
     #include "Keyboard.hpp"
     #include "Mouse.hpp"
-    #include <cstdint>
 
 namespace Arcade {
     ////////////////////////////////////////////////////////////
