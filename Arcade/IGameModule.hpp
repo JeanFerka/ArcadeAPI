@@ -12,6 +12,7 @@
     #include <memory>
     #include "IDrawable.hpp"
     #include "Event.hpp"
+    #include "Rect.hpp"
 
 namespace Arcade {
     class IGameModule;

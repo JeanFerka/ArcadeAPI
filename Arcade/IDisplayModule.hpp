@@ -13,6 +13,7 @@
     #include "Color.hpp"
     #include "Vector.hpp"
     #include "Event.hpp"
+    #include "Rect.hpp"
 
 namespace Arcade {
     class IDisplayModule;
@@ -32,7 +33,7 @@ namespace Arcade {
             virtual void drawText(const std::string &text, Vector2<float> pos, Color color) = 0;
 
             virtual std::vector<Event> getEvents() = 0;
-            virtual void setView(Rect rect) = 0;
+            virtual void setView(Rect<float> rect) = 0;
             virtual void clear() = 0;
             virtual void display() = 0;
     };
