@@ -27,6 +27,8 @@ namespace Arcade {
             virtual void update(std::vector<Event> events) = 0;
 
             virtual std::vector<std::unique_ptr<IDrawable>> getDrawables() = 0;
+
+            virtual Rect<float> getMapBounds() = 0;
     };
 }
 
