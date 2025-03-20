@@ -28,7 +28,7 @@ namespace Arcade {
 
             virtual std::vector<std::unique_ptr<IDrawable>> getDrawables() = 0;
 
-            virtual Rect<float> getMapBounds() = 0;
+            virtual Rect<float> getView() = 0;
     };
 }
 
