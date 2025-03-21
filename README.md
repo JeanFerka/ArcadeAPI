@@ -70,7 +70,7 @@ extern "C" {
 
 The related types and structures are available in the header files contained in the Arcade folder.
 
-## Sample main funciton
+## Sample main function
 
 ```cpp
 #include "Arcade/IDisplayModule.hpp"
