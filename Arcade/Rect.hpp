@@ -21,8 +21,8 @@ namespace Arcade {
 
             bool contains(const Vector2<T> &point) const
             {
-                return this->x <= point.x && point.x <= this->x + this->width
-                    && this->y <= point.y && point.y <= this->y + this->height;
+                return this->x < point.x && point.x < this->x + this->width
+                    && this->y < point.y && point.y < this->y + this->height;
             }
 
             bool intersects(const Rect<T> &rectangle) const
