@@ -52,7 +52,7 @@ namespace Arcade {
                 EventType type; //!< Type of the event
 
                 union {
-                    ChangeEvent gameChange; //!< Change event parameters (Event::Changed)
+                    ChangeEvent change; //!< Change event parameters (Event::Changed)
                     ScoreEvent score;
                 };
 
