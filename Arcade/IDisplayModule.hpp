@@ -5,8 +5,8 @@
 ** IDisplayModule.hpp
 */
 
-#ifndef ARCADE_IDISPLAYMODULE_HPP
-    #define ARCADE_IDISPLAYMODULE_HPP
+#ifndef ARCADE_IDISPLAY_MODULE_HPP
+    #define ARCADE_IDISPLAY_MODULE_HPP
 
     #include <string>
     #include <vector>
@@ -16,6 +16,11 @@
     #include "Rect.hpp"
     #include "Keyboard.hpp"
     #include "Mouse.hpp"
+    #include "Text.hpp"
+    #include "RectangleShape.hpp"
+    #include "CircleShape.hpp"
+    #include "Sprite.hpp"
+    #include "Model.hpp"
 
 namespace Arcade {
     class IDisplayModule;
@@ -58,7 +63,7 @@ namespace Arcade {
                     ///
                     ////////////////////////////////////////////////////////////
                     struct TextEvent {
-                        uint32_t unicode; //!< UTF-32 Unicode value of the character
+                        char character; //!< Value of the character
                     };
 
                     ////////////////////////////////////////////////////////////
@@ -130,13 +135,27 @@ namespace Arcade {
             };
 
         public:
+            enum Type {
+                TEXT,
+                GRAPHICS_2D,
+                GRAPHICS_3D,
+            };
+
+        public:
             virtual ~IDisplayModule() = default;
 
+            // TEXT
+            virtual void drawText(const Text &text) = 0;
+
+            // GRAPHICS 2D
             virtual void drawPixel(Color color, Vector2<float> pos) = 0;
             virtual void drawLine(Color color, Vector2<float> beg, Vector2<float> end) = 0;
-            virtual void drawRectangle(Vector2<float> size, Vector2<float> pos, Color color) = 0;
-            virtual void drawCircle(float radius, Vector2<float> pos, Color color) = 0;
-            virtual void drawText(const std::string &text, Vector2<float> pos, Color color) = 0;
+            virtual void drawRectangle(const RectangleShape &rectangle) = 0;
+            virtual void drawCircle(const CircleShape &circle) = 0;
+            virtual void drawSprite(const Sprite &sprite) = 0;
+
+            // GRAPHICS 3D
+            virtual void drawModel(const Model &model) = 0;
 
             virtual std::vector<Event> getEvents() = 0;
             virtual void setView(Rect<float> rect) = 0;
@@ -145,4 +164,4 @@ namespace Arcade {
     };
 }
 
-#endif /* ARCADE_IDISPLAYMODULE_HPP */
+#endif /* ARCADE_IDISPLAY_MODULE_HPP */
