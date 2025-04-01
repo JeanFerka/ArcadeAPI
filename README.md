@@ -22,15 +22,17 @@ namespace Arcade {
         public:
             virtual ~IGameModule() = default;
 
+            // returns the game events that occured.
             virtual std::vector<Event> getEvents() = 0;
+
+            // updates the state of the game.
             virtual void update(std::vector<IDisplayModule::Event> events) = 0;
+
+            // draws the game on the display given as parameter.
+            virtual void draw(IDisplayModule &display) const override = 0;
     };
 }
 ```
-
-`IGameModule::getEvents` returns the game events that occured.
-`IGameModule::update` updates the state of the game.
-`IGameModule::draw` draws the game on the display given as parameter.
 
 They must also implement the following symbol, that returns an instance of the class implementing the interface.
 
@@ -78,21 +80,26 @@ namespace Arcade {
             // GRAPHICS_3D
             virtual void drawModel(const Model &model) = 0;
 
+            // returns the type of display, either TEXT, GRAPHICS_2D or GRAPHICS_3D.
             virtual Type getType() const = 0;
+
+            
+            // returns the display/system events that occured.
             virtual std::vector<Event> getEvents() = 0;
+
+
+            // sets the part of the game world that the display should show.
             virtual void setView(Rect<float> rect) = 0;
+
+
+            // clears the display.
             virtual void clear() = 0;
+
+            // displays the display.
             virtual void display() = 0;
     };
 }
 ```
-
-`IDisplayModule::getType` returns the type of display, either TEXT, GRAPHICS_2D or GRAPHICS_3D.
-`IDisplayModule::getEvents` returns the display/system events that occured.
-`IDisplayModule::setView` sets the part of the game world that the display should show.
-`IDisplayModule::clear` clears the display.
-`IDisplayModule::display` displays the display.
-The draw* functions are used to draw things on the display.
 
 They must also implement the following symbol, that returns an instance of the class implementing the interface.
 
