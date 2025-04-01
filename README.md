@@ -82,15 +82,12 @@ namespace Arcade {
 
             // returns the type of display, either TEXT, GRAPHICS_2D or GRAPHICS_3D.
             virtual Type getType() const = 0;
-
             
             // returns the display/system events that occured.
             virtual std::vector<Event> getEvents() = 0;
 
-
             // sets the part of the game world that the display should show.
             virtual void setView(Rect<float> rect) = 0;
-
 
             // clears the display.
             virtual void clear() = 0;
@@ -132,16 +129,16 @@ int main(int argc, char **argv)
     Arcade::IDisplayModule *display = getDisplay();
     Arcade::IGameModule *game = getGame();
 
-    std::vector<Arcade::Event> events;
+    std::vector<Arcade::IDisplayModule::Event> displayEvents;
 
     while (true) {
-        events = display->getEvents();
-        for (Arcade::Event &event : events) {
+        displayEvents = display->getEvents();
+        for (Arcade::Event &event : displayEvents) {
             if (event.type == Arcade::Event::Closed) {
                 return 0;
             }
         }
-        game->update(events);
+        game->update(displayEvents);
         display->clear();
         game->draw(*display);
         display->display();
