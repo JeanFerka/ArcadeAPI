@@ -21,7 +21,7 @@ namespace Arcade {
 typedef Arcade::IGameModule ArcadeIGameModule;
 
 namespace Arcade {
-    class IGameModule {
+    class IGameModule : public IDrawable {
         public:
             struct Event {
                 ////////////////////////////////////////////////////////////
@@ -61,10 +61,8 @@ namespace Arcade {
         public:
             virtual ~IGameModule() = default;
 
-            virtual void update(std::vector<IDisplayModule::Event> events) = 0;
             virtual std::vector<Event> getEvents() = 0;
-            virtual std::vector<std::unique_ptr<IDrawable>> getDrawables() = 0;
-            virtual Rect<float> getView() = 0;
+            virtual void update(std::vector<IDisplayModule::Event> events) = 0;
     };
 }
 

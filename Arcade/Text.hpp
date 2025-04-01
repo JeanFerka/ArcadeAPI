@@ -22,7 +22,6 @@ namespace Arcade {
                 StrikeThrough = 1 << 3,
             };
         public:
-            Text() = delete;
             Text(
                 const std::string &string = "",
                 const Color &color = White,

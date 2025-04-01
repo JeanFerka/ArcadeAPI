@@ -16,7 +16,6 @@
 namespace Arcade {
     class CircleShape : public Transformable {
         public:
-            CircleShape() = delete;
             CircleShape(
                 float radius = 25.0f,
                 const Vector2<float> &position = {0.0f, 0.0f},

@@ -16,7 +16,6 @@
 namespace Arcade {
     class RectangleShape : public Transformable {
         public:
-            RectangleShape() = delete;
             RectangleShape(
                 const Vector2<float> &size = {1.0f, 1.0f},
                 const Vector2<float> &position = {0.0f, 0.0f},
@@ -25,15 +24,12 @@ namespace Arcade {
             );
             ~RectangleShape() = default;
         public:
-            void setSize(const Vector2<float> &size);
             void setColor(const Color &color);
             void setOutlineColor(const Color &color);
         public:
-            const Vector2<float> &getSize() const;
             const Color &getColor() const;
             const Color &getOutlineColor() const;
         private:
-            Vector2<float> _size;
             Color _color;
             Color _outlineColor;
     };

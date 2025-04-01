@@ -10,8 +10,8 @@
 Arcade::Transformable::Transformable()
 {
     _position = {0, 0};
-    _scale = {1, 1};
-    _rotation = 0;
+    _size = {1, 1};
+    _angle = 0;
 }
 
 void Arcade::Transformable::setPosition(const Vector2<float> &position)
@@ -19,14 +19,14 @@ void Arcade::Transformable::setPosition(const Vector2<float> &position)
     this->_position = position;
 }
 
-void Arcade::Transformable::setScale(const Vector2<float> &scale)
+void Arcade::Transformable::setSize(const Vector2<float> &size)
 {
-    this->_scale = scale;
+    this->_size = size;
 }
 
-void Arcade::Transformable::setRotation(float rotation)
+void Arcade::Transformable::setAngle(float angle)
 {
-    this->_rotation = rotation;
+    this->_angle = angle;
 }
 
 const Arcade::Vector2<float> &Arcade::Transformable::getPosition() const
@@ -34,27 +34,27 @@ const Arcade::Vector2<float> &Arcade::Transformable::getPosition() const
     return this->_position;
 }
 
-const Arcade::Vector2<float> &Arcade::Transformable::getScale() const
+const Arcade::Vector2<float> &Arcade::Transformable::getSize() const
 {
-    return this->_scale;
+    return this->_size;
 }
 
-float Arcade::Transformable::getRotation() const
+float Arcade::Transformable::getAngle() const
 {
-    return this->_rotation;
+    return this->_angle;
 }
 
-void Arcade::Transformable::move(const Vector2<float> &position)
+void Arcade::Transformable::translate(const Vector2<float> &translation)
 {
-    this->_position += position;
+    this->_position += translation;
 }
 
 void Arcade::Transformable::scale(const Vector2<float> &scale)
 {
-    this->_scale += scale;
+    this->_size += scale;
 }
 
 void Arcade::Transformable::rotate(float rotation)
 {
-    this->_rotation += rotation;
+    this->_angle += rotation;
 }

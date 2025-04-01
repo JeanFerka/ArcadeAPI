@@ -147,16 +147,17 @@ namespace Arcade {
             // TEXT
             virtual void drawText(const Text &text) = 0;
 
-            // GRAPHICS 2D
+            // GRAPHICS_2D
             virtual void drawPixel(Color color, Vector2<float> pos) = 0;
             virtual void drawLine(Color color, Vector2<float> beg, Vector2<float> end) = 0;
             virtual void drawRectangle(const RectangleShape &rectangle) = 0;
             virtual void drawCircle(const CircleShape &circle) = 0;
             virtual void drawSprite(const Sprite &sprite) = 0;
 
-            // GRAPHICS 3D
+            // GRAPHICS_3D
             virtual void drawModel(const Model &model) = 0;
 
+            virtual Type getType() const = 0;
             virtual std::vector<Event> getEvents() = 0;
             virtual void setView(Rect<float> rect) = 0;
             virtual void clear() = 0;

@@ -17,7 +17,6 @@
 namespace Arcade {
     class Sprite : public Transformable {
         public:
-            Sprite() = delete;
             Sprite(
                 const Vector2<float> size = {1.0f, 1.0f},
                 const Vector2<float> position = {0.0f, 0.0f}
@@ -29,25 +28,20 @@ namespace Arcade {
             );
             Sprite(
                 const std::string &texturePath,
-                const Rect<float> &textureRect,
+                const Rect<int> &textureRect,
                 const Vector2<float> size = {1.0f, 1.0f},
                 const Vector2<float> position = {0.0f, 0.0f}
             );
             ~Sprite() = default;
         public:
-            void setColor(const Color &color);
-            void setSize(const Vector2<float> &size);
             void setTexture(const std::string &texturePath);
-            void setTextureRect(const Rect<float> &textureRect);
+            void setTextureRect(const Rect<int> &textureRect);
         public:
-            const Vector2<float> &getColor();
-            const Vector2<float> &getSize();
-            const std::string &getTexture();
-            const Rect<float> &getTextureRect();
+            const std::string &getTexture() const;
+            const Rect<int> &getTextureRect() const;
         private:
-            Vector2<float> _size;
             std::string _texture;
-            Rect<float> _textureRect;
+            Rect<int> _textureRect;
     };
 }
 

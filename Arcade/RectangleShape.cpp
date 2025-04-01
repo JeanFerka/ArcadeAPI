@@ -19,11 +19,6 @@ Arcade::RectangleShape::RectangleShape(
     _outlineColor = outlineColor;
 }
 
-void Arcade::RectangleShape::setSize(const Vector2<float> &size)
-{
-    _size = size;
-}
-
 void Arcade::RectangleShape::setColor(const Color &color)
 {
     _color = color;
@@ -32,11 +27,6 @@ void Arcade::RectangleShape::setColor(const Color &color)
 void Arcade::RectangleShape::setOutlineColor(const Color &color)
 {
     _outlineColor = color;
-}
-
-const Arcade::Vector2<float> &Arcade::RectangleShape::getSize() const
-{
-    return _size;
 }
 
 const Arcade::Color &Arcade::RectangleShape::getColor() const
