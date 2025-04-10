@@ -50,6 +50,55 @@ namespace Arcade {
             T width;
             T height;
     };
-}
 
+    template <typename T>
+    class Rect3d {
+        public:
+            Rect3d() = default;
+            Rect3d(T X, T Y, T Z, T Width, T Height, T Lenght)
+            {
+                this->x = X;
+                this->y = Y;
+                this->z = Z;
+                this->width = Width;
+                this->height = Height;
+                this->lenght = Lenght;
+            };
+            template <typename U>
+            Rect3d(const Rect3d<U> &rectangle)
+            {
+                this->x = rectangle.x;
+                this->y = rectangle.y;
+                this->z = rectangle.z;
+                this->width = rectangle.width;
+                this->height = rectangle.height;
+                this->Lenght = rectangle.lenght;
+            }
+            ~Rect3d() = default;
+        public:
+            bool contains(const Vector3<T> &point) const
+            {
+                return this->x < point.x && point.x < this->x + this->width
+                    && this->y < point.y && point.y < this->y + this->lenght
+                    && this->z < point.z && point.z < this->z + this->height;
+
+            }
+            bool intersects(const Rect3d<T> &rectangle) const
+            {
+                return !(this->x + this->width <= rectangle.x
+                    || this->y + this->lenght <= rectangle.y
+                    || this->z + this->height <= rectangle.z
+                    || rectangle.x + rectangle.width <= this->x
+                    || rectangle.y + rectangle.lenght <= this->y
+                    || rectangle.z + rectangle.height <= this->z);
+            }
+        public:
+            T x;
+            T y;
+            T z;
+            T width;
+            T height;
+            T Lenght;
+    };
+}
 #endif /* ARCADE_RECT_HPP */
