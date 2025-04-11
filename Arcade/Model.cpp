@@ -21,6 +21,7 @@ Arcade::Model::Model(
     const Vector3<float> size,
     const Vector3<float> position)
 {
+    this->_mesh = meshPath;
     this->_texture = texturePath;
     this->_size = size;
     this->_position = position;
@@ -33,6 +34,7 @@ Arcade::Model::Model(
     const Vector3<float> size,
     const Vector3<float> position)
 {
+    this->_mesh = meshPath;
     this->_texture = texturePath;
     this->_textureRect = textureRect;
     this->_size = size;
